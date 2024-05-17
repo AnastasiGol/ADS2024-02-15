@@ -3,7 +3,6 @@ package by.it.group351005.golubeva.lesson06;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
-import java.util.LinkedList;
 import java.util.Scanner;
 
 /*
@@ -43,7 +42,8 @@ public class A_LIS {
         int[] m = new int[n];
         //читаем всю последовательность
         for (int i = 0; i < n; i++) {
-            m[i] = scanner.nextInt();
+            m[i]
+                    = scanner.nextInt();
         }
         int result = 0;
         int[] dests = new int[n + 1];

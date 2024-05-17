@@ -24,6 +24,8 @@ public class B_Sheduler {
         System.out.println(starts);                                 //покажем рассчитанный график занятий
     }
 
+
+
     List<Event> calcStartTimes(Event[] events, int from, int to) {
         //Events - события которые нужно распределить в аудитории
         //в период [from, int] (включительно).
@@ -31,7 +33,36 @@ public class B_Sheduler {
         //Начало и конец событий могут совпадать.
         List<Event> result;
         result = new ArrayList<>();
+        Event currEvent = events[0];
+        int currStart = from, currStop = to;
         //ваше решение.
+        while(currStart!= currStop) {
+            for (Event event : events) {
+                if (event.start <= currEvent.start && event.stop <= currEvent.stop && event.start >= currStart ) {
+                    currEvent = event;
+                }
+            }
+            result.add(currEvent);
+            int i = 0;
+            boolean found = false;
+            currStart = currEvent.stop;
+            while(!found && currStart != currStop) {
+                while (i < events.length && events[i].start != currStart ) {
+                    //currEvent = events[i];
+                    i++;
+                }
+                if(i < events.length && events[i].start == currStart){
+                    currEvent = events[i];
+                    found = true;
+                }else{
+                    i = 0;
+                    currStart++;
+                }
+
+            }
+        }
+
+
 
 
         return result;          //вернем итог

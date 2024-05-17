@@ -37,13 +37,32 @@ import java.util.Scanner;
 */
 
 public class A_EditDist {
+    private static int calculateDistanceRecursive(String s1, String s2, int m, int n) {
+        // Базовые случаи
+        if (m == 0) {
+            return n;
+        }
+        if (n == 0) {
+            return m;
+        }
+
+        // Если символы совпадают
+        if (s1.charAt(m - 1) == s2.charAt(n - 1)) {
+            return calculateDistanceRecursive(s1, s2, m - 1, n - 1);
+        }
+
+        // Выбираем минимум из вставки, удаления и замены
+        int insert = calculateDistanceRecursive(s1, s2, m, n - 1) + 1;
+        int delete = calculateDistanceRecursive(s1, s2, m - 1, n) + 1;
+        int replace = calculateDistanceRecursive(s1, s2, m - 1, n - 1) + 1;
+
+        return Math.min(insert, Math.min(delete, replace));
+    }
 
 
     int getDistanceEdinting(String one, String two) {
         //!!!!!!!!!!!!!!!!!!!!!!!!!     НАЧАЛО ЗАДАЧИ     !!!!!!!!!!!!!!!!!!!!!!!!!
-
-
-        int result = 0;
+        int result = calculateDistanceRecursive(one, two, one.length(), two.length());
         //!!!!!!!!!!!!!!!!!!!!!!!!!     КОНЕЦ ЗАДАЧИ     !!!!!!!!!!!!!!!!!!!!!!!!!
         return result;
     }

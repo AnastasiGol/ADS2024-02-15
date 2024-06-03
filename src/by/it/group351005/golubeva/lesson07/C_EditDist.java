@@ -89,7 +89,6 @@ public class C_EditDist {
         return result;
     }
 
-
     public static void main(String[] args) throws FileNotFoundException {
         InputStream stream = C_EditDist.class.getResourceAsStream("dataABC.txt");
         C_EditDist instance = new C_EditDist();

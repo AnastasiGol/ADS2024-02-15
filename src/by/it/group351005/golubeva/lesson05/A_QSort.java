@@ -1,11 +1,9 @@
 package by.it.group351005.golubeva.lesson05;
 
-import by.it.group351005.golubeva.lesson02.B_Sheduler;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.util.Scanner;
-import java.util.Arrays;
 
 /*
 Видеорегистраторы и площадь.

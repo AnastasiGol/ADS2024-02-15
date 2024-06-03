@@ -35,7 +35,7 @@ public class C_QSortOptimized {
 
 
     //отрезок
-    private class Segment  implements Comparable{
+    private static class Segment  implements Comparable{
         int start;
         int stop;
 
@@ -113,7 +113,7 @@ public class C_QSortOptimized {
         //читаем сами отрезки
         for (int i = 0; i < n; i++) {
             //читаем начало и конец каждого отрезка
-            segments[i]=new Segment(scanner.nextInt(),scanner.nextInt());
+            segments[i]= new Segment(scanner.nextInt(), scanner.nextInt());
         }
         //читаем точки
         for (int i = 0; i < m; i++) {

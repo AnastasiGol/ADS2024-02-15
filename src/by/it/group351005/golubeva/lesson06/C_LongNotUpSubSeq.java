@@ -70,7 +70,6 @@ public class C_LongNotUpSubSeq {
         }
         result = topDest;
 
-
         //!!!!!!!!!!!!!!!!!!!!!!!!!     КОНЕЦ ЗАДАЧИ     !!!!!!!!!!!!!!!!!!!!!!!!!
         return result;
     }

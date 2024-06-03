@@ -53,7 +53,6 @@ public class A_Knapsack {
                 }
             }
         }
-
         int result = maxWeight[w];
         //!!!!!!!!!!!!!!!!!!!!!!!!!     КОНЕЦ ЗАДАЧИ     !!!!!!!!!!!!!!!!!!!!!!!!!
         return result;

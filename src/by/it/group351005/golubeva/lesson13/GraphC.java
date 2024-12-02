@@ -86,5 +86,4 @@ public class GraphC {
             for (String next_node : graph.get(node))
                 if (!visited.contains(next_node))
                     dfs(next_node, graph, visited, path);
-    }
-}
+    }}

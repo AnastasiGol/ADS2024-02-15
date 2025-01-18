@@ -1,4 +1,4 @@
-package lesson12;
+package by.it.group310902.chyliuk.lesson12;
 
 import java.util.Collection;
 import java.util.Map;
@@ -6,7 +6,7 @@ import java.util.Set;
 
 public class MyAvlMap implements Map<Integer, String> {
 
-    class Node {
+    static class Node {
         int key;
         String value;
         int Height;

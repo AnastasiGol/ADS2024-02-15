@@ -1,4 +1,4 @@
-package lesson12;
+package by.it.group310902.chyliuk.lesson12;
 
 import java.util.*;
 
@@ -6,7 +6,7 @@ public class MySplayMap implements NavigableMap<Integer, String> {
 
     Node Root;
 
-    class Node {
+    static class Node {
         Integer key;
         String value;
         Node left, right, parent;

@@ -1,4 +1,4 @@
-package lesson12;
+package by.it.group310902.chyliuk.lesson12;
 
 import java.util.*;
 
@@ -10,7 +10,7 @@ public class MyRbMap implements SortedMap<Integer, String> {
         RED, BLACK
     }
 
-    class Node {
+    static class Node {
         Integer key;
         String value;
         Node parent, left, right;
